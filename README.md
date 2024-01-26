@@ -39,7 +39,9 @@ Before you begin, ensure you have the following installed:
 
 
 1.Open the project in Visual Studio.
+
 2.Set up the database using SQL Management Studio.
+
 3.Build and run the project.
 
 Usage
