@@ -1,75 +1,104 @@
-# FinalProject
-# Mia's Sweet Bakery
+# Recipe Finder Web App – .NET Core & API Integration
 
-Welcome to Mia's Sweet Bakery, a delightful platform for exploring sweet treats, recipes, and a seamless ordering experience.
+Welcome to the **Recipe Finder Web App**, a modern .NET Core-based web application that helps users discover and explore delicious recipes through seamless integration with a third-party food API.
 
-# Table of Contents
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-4. [Usage](#usage)
-5. [Technologies Used](#technologies-used)
-6. [Contributing](#contributing)
-7. [License](#license)
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [External API](#external-api)
+- [Contributing](#contributing)
+- [License](#license)
 
-# Introduction
-Mia's Sweet Bakery is a web application that allows users to explore a variety of sweet products, access detailed recipes, and conveniently order their favorite treats. The platform aims to provide a user-friendly experience in the realm of sweet treats and culinary exploration.
+## Introduction
 
-# Features
-- **Product Browsing:** Explore a diverse range of sweet products categorized by main ingredients.
-- **Recipe Integration:** Access detailed recipes associated with each sweet product.
-- **Favorites System:** Personalize your experience by favoriting and managing your preferred products.
-- **Efficient Ordering:** Streamlined ordering process for a hassle-free transaction.
-- **User-Friendly Interface:** A visually appealing and intuitive design for easy navigation.
+**Recipe Finder** is a web application built with ASP.NET Core that allows users to browse a variety of recipes, view ingredients and instructions, and manage their favorite dishes. The app dynamically pulls content using a third-party recipe API, including recipe titles, images, and cooking instructions.
 
-# Getting Started
-## Prerequisites
-Before you begin, ensure you have the following installed:
-- [.NET 7.0](https://dotnet.microsoft.com/download/dotnet/7.0)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-- [SQL Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+## Features
 
-## Installation
+- 🔎 **Recipe Search** – Discover recipes from a wide selection of categories.
+- 📸 **Dynamic Content** – Recipes, images, and instructions are loaded via an external food API.
+- ⭐ **Favorites System** – Save and manage your favorite dishes.
+- 🧾 **Detailed View** – See ingredients, preparation steps, and images for each recipe.
+- 🎨 **Clean UI** – Built with a responsive and user-friendly interface.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [.NET 7.0 SDK](https://dotnet.microsoft.com/download)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/)
+- [SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)
+
+### Installation
+
 1. Clone the repository:
-   ```bash
-   git clone (https://github.com/AnaMarijaTofilovska/FinalProject.NET.git)
+ 
+   git clone https://github.com/AnaMarijaTofilovska/netcore-recipe-webapp.git
 
 
+2. Open the solution in **Visual Studio 2022**.
 
-1.Open the project in Visual Studio.
+3. Set up your database using **SQL Server Management Studio**.
 
-2.Set up the database using SQL Management Studio.
+4. Configure the external API key (see below).
 
-3.Build and run the project.
+5. Build and run the project using IIS Express or Kestrel.
 
-Usage
-1.Register or log in to your Mia's Sweet Bakery account.
-2.Explore sweet products, view recipes, and add favorites.
-3.Place orders seamlessly for your favorite treats.
-4.Enjoy a personalized and engaging culinary experience!
+### Usage
+
+1. Register or log in to your account.
+2. Browse or search for recipes by keyword or ingredient.
+3. View recipe details including ingredients, steps, and images.
+4. Save favorite recipes for quick access later.
+
+## Technologies Used
+
+* **C#** / **.NET 7.0**
+* **ASP.NET MVC**
+* **Entity Framework Core**
+* **HTML**, **CSS**, **JavaScript**
+* **jQuery**
+* **SQL Server**
+
+## External API
+
+This project uses a third-party food and recipe API to fetch recipe data, images, and nutritional details.
+
+> ⚠️ **Note**: This project uses a public food recipe API to fetch recipes and images. An API key is required, which you can obtain by signing up on a free recipe API provider (e.g., Spoonacular, Edamam, etc.). Once you have a key, place it in the `appsettings.json` file as shown below:
+
+"RecipeApi": {
+  "BaseUrl": "https://api.example.com",
+  "ApiKey": "your-api-key-here"
+}
+
+## Contributing
+
+Contributions are welcome! 🎉
+
+1. Fork the repository
+2. Create a feature branch
+
+   git checkout -b feature/your-feature
+
+3. Commit your changes
+   
+   git commit -m "Add your feature"
+
+5. Push to your branch
+
+   git push origin feature/your-feature
+  
+6. Open a pull request 🚀
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 
-Technologies Used
-C# (.NET 7.0)
-HTML, CSS, JavaScript
-ASP.NET MVC
-jQuery
-
-
-Contributing
-Contributions are welcome! Follow these steps:
-
-1.Fork the repository.
-2.Create a new branch (git checkout -b feature/new-feature).
-3.Commit your changes (git commit -m 'Add new feature').
-4.Push to the branch (git push origin feature/new-feature).
-5.Open a pull request.
-
-
-License
-This project is licensed under the MIT License.
-
-
-This README provides clear setup instructions, usage guidelines, and information about the project, ensuring developers and users have the necessary information to understand, install, and contribute to Mia's Sweet Bakery.
